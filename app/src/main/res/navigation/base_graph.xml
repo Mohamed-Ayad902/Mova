@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/base_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.mova.ui.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tvShowDetailsFragment"
+            app:destination="@id/tvShowDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_quotesFragment"
+            app:destination="@id/quotesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_seeAllMoviesFragment"
+            app:destination="@id/seeAllMoviesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_peopleFragment"
+            app:destination="@id/peopleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_seeAllPeopleFragment"
+            app:destination="@id/seeAllPeopleFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.example.mova.ui.fragments.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_tvShowDetailsFragment"
+            app:destination="@id/tvShowDetailsFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_peopleFragment"
+            app:destination="@id/peopleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quotesFragment"
+        android:name="com.example.mova.ui.fragments.QuotesFragment"
+        android:label="fragment_quotes"
+        tools:layout="@layout/fragment_quotes" >
+        <action
+            android:id="@+id/action_quotesFragment_to_quoteDetailsFragment"
+            app:destination="@id/quoteDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="com.example.mova.ui.fragments.SavedFragment"
+        android:label="fragment_saved"
+        tools:layout="@layout/fragment_saved" >
+        <action
+            android:id="@+id/action_savedFragment_to_tvShowDetailsFragment"
+            app:destination="@id/tvShowDetailsFragment" />
+        <action
+            android:id="@+id/action_savedFragment_to_savedMovieFragment"
+            app:destination="@id/savedMovieFragment" />
+        <action
+            android:id="@+id/action_savedFragment_to_savedTvShowFragment"
+            app:destination="@id/savedTvShowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.example.mova.ui.fragments.MovieDetailsFragment"
+        android:label="fragment_movie_details"
+        tools:layout="@layout/fragment_movie_details">
+        <argument
+            android:name="movieId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_peopleFragment"
+            app:destination="@id/peopleFragment" />
+        <argument
+            android:name="movie"
+            app:argType="com.example.mova.data.movie.Movie"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/tvShowDetailsFragment"
+        android:name="com.example.mova.ui.fragments.TvShowDetailsFragment"
+        android:label="fragment_tv_show_details"
+        tools:layout="@layout/fragment_tv_show_details">
+        <argument
+            android:name="tvId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_tvShowDetailsFragment_to_seasonFragment"
+            app:destination="@id/seasonFragment" />
+        <action
+            android:id="@+id/action_tvShowDetailsFragment_to_peopleFragment"
+            app:destination="@id/peopleFragment" />
+        <argument
+            android:name="tv"
+            app:argType="com.example.mova.data.tv.Tv"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/seasonFragment"
+        android:name="com.example.mova.ui.fragments.SeasonFragment"
+        android:label="fragment_season"
+        tools:layout="@layout/fragment_season" >
+        <action
+            android:id="@+id/action_seasonFragment_to_episodeFragment"
+            app:destination="@id/episodeFragment" />
+        <argument
+            android:name="seasonId"
+            app:argType="integer" />
+        <argument
+            android:name="tvId"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/episodeFragment"
+        android:name="com.example.mova.ui.fragments.EpisodeFragment"
+        android:label="fragment_episode"
+        tools:layout="@layout/fragment_episode" >
+        <argument
+            android:name="episode"
+            app:argType="com.example.mova.data.tv_season.Episode" />
+        <action
+            android:id="@+id/action_episodeFragment_to_peopleFragment"
+            app:destination="@id/peopleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/peopleFragment"
+        android:name="com.example.mova.ui.fragments.PeopleFragment"
+        android:label="fragment_people"
+        tools:layout="@layout/fragment_people" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_peopleFragment_to_tvShowDetailsFragment"
+            app:destination="@id/tvShowDetailsFragment" />
+        <action
+            android:id="@+id/action_peopleFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quoteDetailsFragment"
+        android:name="com.example.mova.ui.fragments.QuoteDetailsFragment"
+        android:label="fragment_quote_details"
+        tools:layout="@layout/fragment_quote_details" >
+        <argument
+            android:name="slug"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/seeAllMoviesFragment"
+        android:name="com.example.mova.ui.fragments.SeeAllMoviesFragment"
+        android:label="fragment_see_all_movies"
+        tools:layout="@layout/fragment_see_all_movies" >
+        <argument
+            android:name="diriction"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_seeAllMoviesFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment" />
+        <action
+            android:id="@+id/action_seeAllMoviesFragment_to_tvShowDetailsFragment"
+            app:destination="@id/tvShowDetailsFragment" />
+        <argument
+            android:name="isMovie"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/seeAllPeopleFragment"
+        android:name="com.example.mova.ui.fragments.SeeAllPeopleFragment"
+        android:label="fragment_see_all_people"
+        tools:layout="@layout/fragment_see_all_people" >
+        <action
+            android:id="@+id/action_seeAllPeopleFragment_to_peopleFragment"
+            app:destination="@id/peopleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedMovieFragment"
+        android:name="com.example.mova.ui.fragments.SavedMovieFragment"
+        android:label="fragment_saved_movie"
+        tools:layout="@layout/fragment_saved_movie" >
+        <argument
+            android:name="movie"
+            app:argType="com.example.mova.data.movie.Movie" />
+    </fragment>
+    <fragment
+        android:id="@+id/savedTvShowFragment"
+        android:name="com.example.mova.ui.fragments.SavedTvShowFragment"
+        android:label="fragment_saved_tv_show"
+        tools:layout="@layout/fragment_saved_tv_show" >
+        <argument
+            android:name="tv"
+            app:argType="com.example.mova.data.tv.Tv" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.mova.ui.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+        <action
+            android:id="@+id/action_settingsFragment_to_savedFragment"
+            app:destination="@id/savedFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_quotesFragment"
+            app:destination="@id/quotesFragment" />
+    </fragment>
+</navigation>

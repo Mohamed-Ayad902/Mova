@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gredient_primary"
+    android:fitsSystemWindows="true"
+    android:paddingBottom="@dimen/_5sdp"
+    tools:context=".ui.fragments.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/btn_settings"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/ic_round_settings_24"
+            app:layout_constraintEnd_toEndOf="@id/iv_search"
+            app:layout_constraintStart_toStartOf="@id/iv_search"
+            app:layout_constraintTop_toBottomOf="@id/iv_search"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_helloThere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/goda"
+            android:text="Hello There!"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_19ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_tonight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/goda"
+            android:text="What are you watching tonight?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_helloThere" />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:padding="@dimen/_3sdp"
+            android:src="@drawable/ic_search"
+            app:layout_constraintBottom_toBottomOf="@id/tv_tonight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_helloThere"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/tv_topMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_35sdp"
+            android:fontFamily="@font/goda"
+            android:text="Top Movies"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tonight" />
+
+        <TextView
+            android:id="@+id/seeAllTopMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="See all"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_topMovies"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_topMovies" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/topRatedMoviesViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_40sdp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/tv_topMovies" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_top_movies"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:paddingHorizontal="@dimen/_30sdp"
+            app:layout_constraintBottom_toBottomOf="@id/topRatedMoviesViewPager"
+            app:layout_constraintTop_toTopOf="@id/topRatedMoviesViewPager">
+
+            <include layout="@layout/top_shimmer_item" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <TextView
+            android:id="@+id/tv_popularMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/goda"
+            android:text="Popular Movies"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topRatedMoviesViewPager" />
+
+        <TextView
+            android:id="@+id/seeAllPopularMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="See all"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_popularMovies"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_popularMovies" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popularMoviesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/tv_popularMovies" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_popularMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/popularMoviesRecyclerView"
+            app:layout_constraintTop_toTopOf="@id/popularMoviesRecyclerView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <TextView
+            android:id="@+id/tv_nowPlayingMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/goda"
+            android:text="Now Playing Movies"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/popularMoviesRecyclerView" />
+
+        <TextView
+            android:id="@+id/seeAllNowPlayingMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="See all"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_nowPlayingMovies"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_nowPlayingMovies" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/nowPlayingMoviesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/tv_nowPlayingMovies" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_nowPlayingMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/nowPlayingMoviesRecyclerView"
+            app:layout_constraintTop_toTopOf="@id/nowPlayingMoviesRecyclerView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_upComingMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/goda"
+            android:text="UpComing Movies"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nowPlayingMoviesRecyclerView" />
+
+        <TextView
+            android:id="@+id/seeAllUpcomingMovies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="See all"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_upComingMovies"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_upComingMovies" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upComingMoviesRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/tv_upComingMovies" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_upComingMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/upComingMoviesRecyclerView"
+            app:layout_constraintTop_toTopOf="@id/upComingMoviesRecyclerView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <TextView
+            android:id="@+id/tv_topRatedTvShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/goda"
+            android:text="Top Rated Series"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/upComingMoviesRecyclerView" />
+
+
+        <TextView
+            android:id="@+id/seeAllTopTvShows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="See all"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_topRatedTvShow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_topRatedTvShow" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/topRatedTvShowViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:paddingHorizontal="@dimen/_40sdp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/tv_topRatedTvShow" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_top_tvShows"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            android:paddingHorizontal="@dimen/_30sdp"
+            app:layout_constraintBottom_toBottomOf="@id/topRatedTvShowViewPager"
+            app:layout_constraintTop_toTopOf="@id/topRatedTvShowViewPager">
+
+            <include layout="@layout/top_shimmer_item" />
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+        <TextView
+            android:id="@+id/tv_popularTvShow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/goda"
+            android:text="Popular Series"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/topRatedTvShowViewPager" />
+
+
+        <TextView
+            android:id="@+id/seeAllPopularTvShows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="See all"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_popularTvShow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_popularTvShow" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popularTvShowRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/tv_popularTvShow" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_popularTvShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/popularTvShowRecyclerView"
+            app:layout_constraintTop_toTopOf="@id/popularTvShowRecyclerView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_airingToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/goda"
+            android:text="Airing Today"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/popularTvShowRecyclerView" />
+
+        <TextView
+            android:id="@+id/seeAllAiringTodayTvShows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="See all"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_airingToday"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_airingToday" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/airingTodayTvShowRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/tv_airingToday" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_airingToday"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/airingTodayTvShowRecyclerView"
+            app:layout_constraintTop_toTopOf="@id/airingTodayTvShowRecyclerView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_onAir"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/goda"
+            android:text="On Air"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/airingTodayTvShowRecyclerView" />
+
+        <TextView
+            android:id="@+id/seeAllOnAirTvShows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="See all"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_onAir"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_onAir" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/onAirTvShowRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_140sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/tv_onAir" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_onAirTvShow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/onAirTvShowRecyclerView"
+            app:layout_constraintTop_toTopOf="@id/onAirTvShowRecyclerView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+                <include layout="@layout/popular_shimmer_item" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        <TextView
+            android:id="@+id/tv_popularPeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/goda"
+            android:text="Popular Cast"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13ssp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/onAirTvShowRecyclerView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popularPeopleRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_90sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:visibility="invisible"
+            app:layout_constraintTop_toBottomOf="@id/tv_popularPeople" />
+
+        <TextView
+            android:id="@+id/seeAllPopularCast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:text="See all"
+            android:textColor="@color/accent"
+            android:textSize="@dimen/_11ssp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_popularPeople"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_popularPeople" />
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_popularCast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/popularPeopleRecyclerView"
+            app:layout_constraintTop_toTopOf="@id/popularPeopleRecyclerView">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <include layout="@layout/popular_people_shimmer_item" />
+
+                <include layout="@layout/popular_people_shimmer_item" />
+
+                <include layout="@layout/popular_people_shimmer_item" />
+
+                <include layout="@layout/popular_people_shimmer_item" />
+
+                <include layout="@layout/popular_people_shimmer_item" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,73 @@
+package com.example.mova.adapters
+
+import android.content.Context
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.AsyncListDiffer
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
+import com.bumptech.glide.Glide
+import com.example.mova.R
+import com.example.mova.adapters.callbacks.OnMovieClickListener
+import com.example.mova.data.movie.Movie
+import com.example.mova.databinding.TopMoviesSliderItemBinding
+import com.example.mova.utils.Constants.Companion.IMAGE_URL
+
+class TopMoviesSlideAdapter(
+    private val listener: OnMovieClickListener,
+    private val context: Context, private val viewPager: ViewPager2
+) :
+    RecyclerView.Adapter<TopMoviesSlideAdapter.TopMoviesVH>() {
+
+    inner class TopMoviesVH(val binding: TopMoviesSliderItemBinding) :
+        RecyclerView.ViewHolder(binding.root)
+
+    private val differCallBack = object : DiffUtil.ItemCallback<Movie>() {
+        override fun areItemsTheSame(oldItem: Movie, newItem: Movie) =
+            oldItem.id == newItem.id
+
+        override fun areContentsTheSame(oldItem: Movie, newItem: Movie) = oldItem == newItem
+    }
+
+    val differ = AsyncListDiffer(this, differCallBack)
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
+        TopMoviesVH(
+            TopMoviesSliderItemBinding.inflate(
+                LayoutInflater.from(parent.context),
+                parent,
+                false
+            )
+        )
+
+
+    override fun onBindViewHolder(holder: TopMoviesVH, position: Int) {
+        val movie = differ.currentList[position]
+        if (position == differ.currentList.size - 2) {
+//            viewPager.post(runnable)
+
+        }
+        holder.binding.apply {
+            movie.poster_path?.let {
+                Glide.with(context).load(IMAGE_URL + movie.poster_path)
+                    .into(imageView)
+            } ?: Glide.with(context).load(R.drawable.series)
+                .into(imageView)
+//            textView.text = movie.title
+            holder.itemView.setOnClickListener {
+                listener.onClick(movie)
+            }
+        }
+    }
+
+    override fun getItemCount() = differ.currentList.size
+
+//    private val runnable = Runnable {
+//        differ.currentList.addAll(differ.currentList)
+//        list.addAll(list)
+//        notifyDataSetChanged()
+//    }
+
+
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#141A32</color>
+    <color name="half_primary">#80141A32</color>
+    <color name="secondary">#283157</color>
+    <color name="accent">#0D78EE</color>
+    <color name="primary_dark">#080F29</color>
+    <!--    <color name="text_color">#53698E</color>-->
+    <color name="text_color">#A5A5A5</color>
+    <color name="rating">#EBB808</color>
+    <color name="budget">#B51515</color>
+
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+</resources>

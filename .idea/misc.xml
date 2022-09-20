@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Mova/app/src/main/res/drawable-v24/radio_selected.xml" value="0.188" />
+        <entry key="..\:/Mova/app/src/main/res/drawable-v24/radio_selected_state.xml" value="0.188" />
+        <entry key="..\:/Mova/app/src/main/res/drawable-v24/text_selected_state.xml" value="0.188" />
+        <entry key="..\:/Mova/app/src/main/res/drawable/radio.xml" value="0.188" />
+        <entry key="..\:/Mova/app/src/main/res/drawable/radio_normal.xml" value="0.188" />
+        <entry key="..\:/Mova/app/src/main/res/drawable/search_bg.xml" value="0.1775" />
+        <entry key="..\:/Mova/app/src/main/res/drawable/shimmer_bg.xml" value="0.1775" />
+        <entry key="..\:/Mova/app/src/main/res/drawable/shimmer_round_bg.xml" value="0.1775" />
+        <entry key="..\:/Mova/app/src/main/res/layout/activity_trailer.xml" value="0.2694746376811594" />
+        <entry key="..\:/Mova/app/src/main/res/layout/cast_item.xml" value="0.264" />
+        <entry key="..\:/Mova/app/src/main/res/layout/crew_item.xml" value="0.259375" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_episode.xml" value="0.245018115942029" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_home.xml" value="0.23281907433380084" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_movie_details.xml" value="0.245018115942029" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_people.xml" value="0.25744992672203226" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_quote_details.xml" value="0.2694746376811594" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_quotes.xml" value="0.1222737819025522" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_saved.xml" value="0.176" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_saved_movie.xml" value="0.2694746376811594" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_saved_tv_show.xml" value="0.2694746376811594" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_search.xml" value="0.264" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_searched_movies.xml" value="0.2694746376811594" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_searched_people.xml" value="0.2694746376811594" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_searched_series.xml" value="0.2604166666666667" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_season.xml" value="0.245018115942029" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_second.xml" value="0.10520833333333333" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_see_all_movies.xml" value="0.2694746376811594" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_see_all_people.xml" value="0.2694746376811594" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_see_all_tv.xml" value="0.2604166666666667" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_settings.xml" value="0.2694746376811594" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_trailer.xml" value="0.2694746376811594" />
+        <entry key="..\:/Mova/app/src/main/res/layout/fragment_tv_show_details.xml" value="0.2" />
+        <entry key="..\:/Mova/app/src/main/res/layout/people_item.xml" value="0.2694746376811594" />
+        <entry key="..\:/Mova/app/src/main/res/layout/popular_movies_item.xml" value="0.264" />
+        <entry key="..\:/Mova/app/src/main/res/layout/popular_people_item.xml" value="0.245018115942029" />
+        <entry key="..\:/Mova/app/src/main/res/layout/popular_people_shimmer_item.xml" value="0.245018115942029" />
+        <entry key="..\:/Mova/app/src/main/res/layout/popular_shimmer_item.xml" value="0.245018115942029" />
+        <entry key="..\:/Mova/app/src/main/res/layout/production_company_item.xml" value="0.245018115942029" />
+        <entry key="..\:/Mova/app/src/main/res/layout/quote_item.xml" value="0.536" />
+        <entry key="..\:/Mova/app/src/main/res/layout/saeson_item.xml" value="0.259375" />
+        <entry key="..\:/Mova/app/src/main/res/layout/saved_item.xml" value="0.264" />
+        <entry key="..\:/Mova/app/src/main/res/layout/shimmer_saeson_item.xml" value="0.245018115942029" />
+        <entry key="..\:/Mova/app/src/main/res/layout/simmer_production_company_item.xml" value="0.245018115942029" />
+        <entry key="..\:/Mova/app/src/main/res/layout/top_movies_slider_item.xml" value="0.259375" />
+        <entry key="..\:/Mova/app/src/main/res/layout/top_shimmer_item.xml" value="0.245018115942029" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/drawable-v24/bg_gredient_bw.xml" value="0.1455" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/drawable-v24/bg_gredient_red.xml" value="0.1455" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/drawable-v24/user_view_bg.xml" value="0.1625" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/drawable/bg_gredient.xml" value="0.1455" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/drawable/bg_gredient_primary.xml" value="0.1455" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/drawable/circle_bg.xml" value="0.14" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/drawable/expanding_view_bg.xml" value="0.1455" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/drawable/fade_bg.xml" value="0.14" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/drawable/ic_season.xml" value="0.1625" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/drawable/image_container_bg.xml" value="0.1455" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/drawable/indicator_active.xml" value="0.1455" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/drawable/indicator_inactive.xml" value="0.1455" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/drawable/rounded_bg.xml" value="0.14" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/activity_home.xml" value="0.209375" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/activity_on_boarding.xml" value="0.209375" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/activity_splash.xml" value="0.22" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/category_item.xml" value="0.25" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/fragment_first.xml" value="0.209375" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/fragment_home.xml" value="0.22" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/fragment_movie_details.xml" value="0.17" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/fragment_on_boardinf2.xml" value="0.2" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/fragment_on_boarding1.xml" value="0.22" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/fragment_on_boarding3.xml" value="0.22" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/fragment_on_boarding_holder.xml" value="0.1953125" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/fragment_saved.xml" value="0.22" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/fragment_second.xml" value="0.209375" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/fragment_splash.xml" value="0.209375" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/fragment_third.xml" value="0.209375" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/fragment_tv_show_details.xml" value="0.22" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/image_item.xml" value="0.12635869565217392" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/popular_movies_item.xml" value="0.33" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/popular_people_item.xml" value="0.33" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/production_company_item.xml" value="0.33" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/recommended_movie_item.xml" value="0.20153985507246377" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/saeson_item.xml" value="0.25" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/saved_item.xml" value="0.22" />
+        <entry key="..\:/Users/Mohamed/AndroidStudioProjects/Mova/app/src/main/res/layout/top_movies_slider_item.xml" value="0.20153985507246377" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
