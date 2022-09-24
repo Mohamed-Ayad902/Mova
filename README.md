@@ -10,6 +10,7 @@ Movies data app that shows movies and series info with the help of tmbd api.
 
 - Kotlin as programming language.
 - TMDB-Api public api that provides several data about movies, series and cast.
+- Youtube-Api to play selected movie trailer.
 - Coroutines for multithreading and handling requests in a background thread.
 - Room for local database without boilerplate code.
 - Retrofit for calling the remote server
